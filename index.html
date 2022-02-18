@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<style></style>
+
+<body>
+    <main>
+        <div id="loader-holder">
+            <div class="loader-spinner"></div>
+            <div>
+                <center><small>Please wait...</small></center>
+            </div>
+        </div>
+        <h1 id="app-title">Simple Loan Calculator </h1>
+        <div id="form-holder">
+            <div id="main-box">
+                <form action="" id="calculate-loan-form">
+                    <div class="form-item">
+                        <label for="loan-amount"><b>Enter Loan Amount</b></label>
+                        <input type="number" step="any" min="0" name="loan-amount" id="loan-amount" placeholder="xxxxx" class="input-item text-right" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="loan-interest"><b>Enter Loan Interest</b> <small>(%)</small></label>
+                        <input type="number" step="any" name="loan-interest" id="loan-interest" placeholder="x" class="input-item text-right" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="loan-years"><b>Years to Pay</b></label>
+                        <input type="number" step="any" min="1" name="loan-years" id="loan-years" placeholder="x" class="input-item text-right" required>
+                    </div>
+                    <div class="form-item">
+                        <button class="btn-block" id="calculate-btn" type="submit">Calucate</button>
+                        <button class="btn-block" id="reset-btn" type="reset">Reset</button>
+                    </div>
+                </form>
+                <table id="result">
+                    <colgroup>
+                        <col width="50%">
+                        <col width="50%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class=""><b>Principal</b></td>
+                            <td class="text-right" id="principal"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Annual Rate</b></td>
+                            <td class="text-right" id="annual-interest"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Loan Terms</b></td>
+                            <td class="text-right" id="loan-terms"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Monthly Payable</b></td>
+                            <td class="text-right" id="monthly-pay"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Total Cost</b></td>
+                            <td class="text-right" id="total-pay"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Total Interest</b></td>
+                            <td class="text-right" id="total-interest"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
